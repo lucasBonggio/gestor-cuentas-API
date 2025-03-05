@@ -117,15 +117,68 @@ Errores posibles :
 ]
 ```
 
-404 Not Found: Si no se encuentran usuarios para el servicio especificado.
-
-
 500 Internal Server Error: Error interno del servidor
 
 ```
 [
 {
   message: "Error interno del servidor. "
+}
+]
+
+```
+
+### GET /usuario/id/:id
+Obtiene una lista de usuarios asociados a un id específico.
+
+**Encabezados requeridos**:
+- Ninguno.
+
+**Parámetros de ruta**:
+- `id` (int): El id de la cuenta a buscar (por ejemplo, `48`, `"6`).
+
+**Respuesta exitosa (200 OK)**:
+```json
+[
+  "message": "Cuenta encontrada exitosamente",
+  "usuario": [
+      {
+        "id": 48,
+        "usuario_id": "Julian Gimenez",
+        "nombre_cuenta": "julian@example.com",
+        "id_contrasena": 45,
+        "nombre_servicio": "Facebook",
+        "contraseña": "9xvHIGcf6g"
+      }
+  ]
+]
+```
+
+Errores posibles :
+
+400 Bad Request: Si no se proporciona un nombre de servicio válido.
+```
+[
+{
+  "message": "La ID debe ser un número entero positivo. "
+}
+]
+
+404 Not Found: Usuario no encontrado. 
+```
+[
+  {
+    message: "No se pudo encontrar la cuenta. "
+  }
+]
+```
+
+```
+500 Internal Server Error: Error interno del servidor
+```
+[
+{
+  message: "Error en el método encontrar por id. "
 }
 ]
 
