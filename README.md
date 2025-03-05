@@ -67,7 +67,66 @@ cd gestor-cuentas-API
 npm install
 
 # Configura las variables de entorno
-cp .env.example .env
 
 # Inicia el servidor
 npm start
+```
+
+
+## Endpoints
+
+### GET /usuario/servicio/:nombre_servicio
+Obtiene una lista de usuarios asociados a un servicio específico.
+
+**Encabezados requeridos**:
+- Ninguno.
+
+**Parámetros de ruta**:
+- `nombre_servicio` (string): El nombre del servicio a buscar (por ejemplo, `"Facebook"`, `"Github"`).
+
+**Respuesta exitosa (200 OK)**:
+```json
+[
+  {
+    "id": 1,
+    "usuario_id": "Juan Pérez",
+    "nombre_cuenta": "juan@example.com",
+    "id_contrasena": 45,
+    "nombre_servicio": "Facebook",
+    "contraseña": "9xvHIGcf6g"
+  },
+  {
+    "id": 46,
+    "usuario_id": 3,
+    "nombre_cuenta": "Carlos Calvo",
+    "id_contrasena": 46,
+    "nombre_servicio": "Github",
+    "contraseña": "T0ZvOnoS2"
+  }
+]
+```
+
+Errores posibles :
+
+400 Bad Request: Si no se proporciona un nombre de servicio válido.
+```
+[
+{
+  "message": "No se encontró ninguna cuenta con el servicio proporcionado. "
+}
+]
+```
+
+404 Not Found: Si no se encuentran usuarios para el servicio especificado.
+
+
+500 Internal Server Error: Error interno del servidor
+
+```
+[
+{
+  message: "Error interno del servidor. "
+}
+]
+
+```
