@@ -47,7 +47,7 @@ Construida con [Node.js](https://nodejs.org/) y [Express](https://expressjs.com/
 Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 - [Node.js](https://nodejs.org/) v16+
-- [MongoDB](https://www.mongodb.com/) v5+
+- [MySQL](https://www.mysql.com/) 
 - [Postman](https://www.postman.com/) (opcional, para probar endpoints)
 
 ---
@@ -58,7 +58,7 @@ Sigue estos pasos para configurar el proyecto localmente:
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/tu-usuario/gestor-cuentas-API.git
+git clone https://github.com/lucasBonggio/gestor-cuentas-API.git
 
 # Navega al directorio del proyecto
 cd gestor-cuentas-API
