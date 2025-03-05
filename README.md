@@ -111,9 +111,9 @@ Errores posibles :
 400 Bad Request: Si no se proporciona un nombre de servicio válido.
 ```
 [
-{
+  {
   "message": "No se encontró ninguna cuenta con el servicio proporcionado. "
-}
+  }
 ]
 ```
 
@@ -121,9 +121,9 @@ Errores posibles :
 
 ```
 [
-{
+  {
   message: "Error interno del servidor. "
-}
+  }
 ]
 
 ```
@@ -159,10 +159,11 @@ Errores posibles :
 400 Bad Request: Si no se proporciona un nombre de servicio válido.
 ```
 [
-{
+  {
   "message": "La ID debe ser un número entero positivo. "
-}
+  }
 ]
+```
 
 404 Not Found: Usuario no encontrado. 
 ```
@@ -173,13 +174,189 @@ Errores posibles :
 ]
 ```
 
-```
 500 Internal Server Error: Error interno del servidor
 ```
 [
-{
+  {
   message: "Error en el método encontrar por id. "
-}
+  }
 ]
 
+```
+
+### GET /usuario/nombre/:nombre_cuenta
+Obtiene una lista de usuarios asociados a un nombre de cuenta específico.
+
+**Encabezados requeridos**:
+- Ninguno.
+
+**Parámetros de ruta**:
+- `nombre_cuenta` (string): El nombre de la cuenta a buscar (por ejemplo, `"juanPerez"`, `"juan123"`).
+
+**Respuesta exitosa (200 OK)**:
+```json
+{
+  "message": "Cuenta encontrada exitosamente.",
+  "usuario": [
+    {
+      "id": 46,
+      "usuario_id": 3,
+      "nombre_cuenta": "juanPerez",
+      "id_contrasena": 46,
+      "nombre_servicio": "Github",
+      "contraseña": "T0ZvOnoS2"
+    }
+  ]
+}
+```
+
+Errores posibles :
+
+400 Bad Request: Si no se proporciona un nombre de servicio válido.
+```
+[
+  {
+  "message": "El nombde de cuenta es obligatorio. "
+  }
+]
+```
+
+404 Not Found: Usuario no encontrado. 
+```
+[
+  {
+    message: "No se pudo encontró ninguna cuenta con el nombre proporcionado. "
+  }
+]
+```
+
+500 Internal Server Error: Error interno del servidor
+```
+[
+  {
+  message: "Error al encontrar el usuario. "
+  }
+]
+
+```
+
+
+### GET /usuario/cuentas
+Obtiene una lista de todas las cuentas.
+
+**Encabezados requeridos**:
+- `Authorization: Bearer <token>`
+
+**Parámetros de ruta**:
+- `Ninguno. `
+
+**Respuesta exitosa (200 OK)**:
+```json
+{
+  "message": "Cuentas encontrada exitosamente.",
+  "cuentas": [
+    {
+      "cuenta_id": 45,
+      "nombre_cuenta": "juanPerez",
+      "nombre_servicio": "Github",
+      "contraseña": "T0ZvOnoS2"
+    },
+        {
+      "cuenta_id": 46,
+      "nombre_cuenta": "carlosCalvo",
+      "nombre_servicio": "Netflix",
+      "contraseña": "T0ZvOnoS2"
+    },
+    {
+      "cuenta_id": 47,
+      "nombre_cuenta": "PepitoFlores",
+      "nombre_servicio": "Facebook",
+      "contraseña": "2lu6?<WF}"
+    },
+    {
+      "cuenta_id": 48,
+      "nombre_cuenta": "alaDelta123",
+      "nombre_servicio": "Twitch",
+      "contraseña": "jOkSj{g5+xz"
+    }
+  ]
+}
+```
+
+Errores posibles :
+
+404 Not Found: Cuentas no encontradas. 
+```
+[
+  {
+    message: "No se pudo encontró ninguna cuenta para este usuario. "
+  }
+]
+```
+
+500 Internal Server Error: Error interno del servidor
+```
+[
+  {
+  message: "Error al obtener cuentas. "
+  }
+]
+```
+
+### GET /perfil
+Obtiene una lista de los datos que el usuario introdujo cuando creo su cuenta.
+
+**Encabezados requeridos**:
+- `Authorization: Bearer <token>`
+
+**Parámetros de ruta**:
+- `Ninguno. `
+
+**Respuesta exitosa (200 OK)**:
+```json
+### GET /usuario/cuentas
+Obtiene una lista de todas las cuentas.
+
+**Encabezados requeridos**:
+- `Authorization: Bearer <token>`
+
+**Parámetros de ruta**:
+- `Ninguno. `
+
+**Respuesta exitosa (200 OK)**:
+```json
+
+{
+  "message": "Cuenta encontrada exitosamente.",
+  "usuario": {
+    "id": 3,
+    "nombre_usuario": "juanPerez",
+    "gmail": "juan@gmail.com",
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "fecha_nacimiento": "2018-12-27T03:00:00.000Z",
+    "fecha_creacion": "2025-03-04T04:05:04.000Z",
+    "genero": "Masculino"
+  }
+}
+```
+
+Errores posibles :
+
+404 Not Found: Cuentas no encontradas. 
+```
+[
+  {
+    message: "No se encontraron datos sobre el usuario. "
+  }
+]
+```
+
+500 Internal Server Error: Error interno del servidor
+```
+[
+  {
+  message: "Error al encontrar al usuario. "
+  }
+]
 ```
