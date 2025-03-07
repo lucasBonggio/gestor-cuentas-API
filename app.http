@@ -1,0 +1,73 @@
+
+###
+POST http://localhost:1234/api/auth/usuario/cuenta
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJpZCI6Mywibm9tYnJlX3VzdWFyaW8iOiJjaGFybHMiLCJnbWFpbCI6ImdhcmNpYUBnbWFpbC5jb20iLCJpYXQiOjE3NDExODU5ODIsImV4cCI6MTc0MTE4OTU4Mn0.bsINBbWVrOnqNWL6HS_QWuqvMyDmO3EuDGO2-aMCsl4
+Content-Type: application/json
+
+{
+    "contraseña": "hola123123123",
+    "nombre_cuenta": "Juan Perez",
+    "nombre_servicio": "Facebook"
+}
+
+
+POST http://localhost:1234/api/auth/generar-contrasena
+Content-Type: application/json
+
+{
+    "longitud": 12,
+    "usarNumeros": true,
+    "usarLetras": true,
+    "usarEspeciales": true
+}
+
+
+
+###
+POST http://localhost:1234/api/auth/login
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJpZCI6Mywibm9tYnJlX3VzdWFyaW8iOiJjaGFybHMiLCJnbWFpbCI6ImdhcmNpYUBnbWFpbC5jb20iLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNzQxMTUwMDUzLCJleHAiOjE3NDExNTM2NTN9.SwdJtHAwtm9nahTPl1SeElrm5jP-PEZtwcStYtwKEnA
+Content-Type: application/json
+
+{
+    "gmail": "garcia@gmail.com",
+    "contraseña": "123123"
+}
+
+
+###
+POST http://localhost:1234/api/auth/register
+Authorization: Bearer
+Content-Type: application/json
+
+{
+    "nombre_usuario": "juanPerez",
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "dia": 6,
+    "mes": "Abril",
+    "año": 1993,
+    "genero": "Masculino",
+    "email": "juan@gmail.com",
+    "contraseña": "contraseñaSegura123"
+}
+
+
+###
+DELETE http://localhost:1234/api/auth/usuario/47
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJpZCI6Mywibm9tYnJlX3VzdWFyaW8iOiJjaGFybHMiLCJnbWFpbCI6ImdhcmNpYUBnbWFpbC5jb20iLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNzQxMTQzMDQxLCJleHAiOjE3NDExNDY2NDF9.vniKey8-GvoI60WP4SBnOXLe0j0wVYSz9QT4urO7RCw
+
+###
+GET  http://localhost:1234/api/auth/perfil
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJpZCI6Mywibm9tYnJlX3VzdWFyaW8iOiJjaGFybHMiLCJnbWFpbCI6ImdhcmNpYUBnbWFpbC5jb20iLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNzQxMTQzMDQxLCJleHAiOjE3NDExNDY2NDF9.vniKey8-GvoI60WP4SBnOXLe0j0wVYSz9QT4urO7RCw
+
+###
+GET http://localhost:1234/api/auth/usuario/cuentas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJpZCI6Mywibm9tYnJlX3VzdWFyaW8iOiJjaGFybHMiLCJnbWFpbCI6ImdhcmNpYUBnbWFpbC5jb20iLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNzQxMTQzMDQxLCJleHAiOjE3NDExNDY2NDF9.vniKey8-GvoI60WP4SBnOXLe0j0wVYSz9QT4urO7RCw
+
+###
+GET http://localhost:1234/api/auth/usuario/nombre/lucasBonggio
+
+
+GET http://localhost:1234/api/auth/usuario/id/48
+####
+GET http://localhost:1234/api/auth/usuario/servicio/Servia
