@@ -73,6 +73,7 @@ cp .env.example .env  # O usa variables.env si prefieres ese nombre
 nano .env  # O usa cualquier editor de texto
 ```
 
+
 ## Contribuciones
 Explica cómo otros pueden contribuir al proyecto:
 ```markdown
@@ -84,9 +85,11 @@ Explica cómo otros pueden contribuir al proyecto:
 2. Haz un fork del repositorio y envía un pull request.
 ```
 
+
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
 
 
 ## Endpoints
