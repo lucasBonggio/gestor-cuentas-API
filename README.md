@@ -12,10 +12,9 @@ API RESTful para gestionar cuentas de usuario con operaciones CRUD y autenticaci
 2. [Características](#características)
 3. [Requisitos](#requisitos)
 4. [Instalación](#instalación)
-5. [Uso](#uso)
-6. [Endpoints](#endpoints)
-7. [Contribuciones](#contribuciones)
-8. [Licencia](#licencia)
+5. [Endpoints](#endpoints)
+6. [Contribuciones](#contribuciones)
+7. [Licencia](#licencia)
 
 ---
 
