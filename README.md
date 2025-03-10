@@ -57,32 +57,37 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 Sigue estos pasos para configurar el proyecto localmente:
 
 ```bash
-# Clona el repositorio
+# 1. Clona el repositorio
 git clone https://github.com/lucasBonggio/gestor-cuentas-API.git
 
-# Navega al directorio del proyecto
+# 2. Navega al directorio del proyecto
 cd gestor-cuentas-API
 
-# Instala las dependencias
+# 3. Instala las dependencias
 npm install
 
-# Configura las variables de entorno
-## Configuración de Variables de Entorno
-1. Edita el archivo `variables.env`:
-   ```bash
-   nano variables.env  # O usa cualquier editor de texto
-# Inicia el servidor
-npm start
-```
-  DB_HOST=localhost
-  DB_USER=tu_usuario_mysql
-  DB_PASSWORD=tu_contraseña
-  SERVER_PORT=3000
+# 4. Configura las variables de entorno
+cp .env.example .env  # O usa variables.env si prefieres ese nombre
+
+# 5. Edita el archivo `.env` con tus credenciales
+nano .env  # O usa cualquier editor de texto
 
 
+### **7. Contribuciones**
+Explica cómo otros pueden contribuir al proyecto:
+```markdown
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si deseas contribuir:
+
+1. Abre un issue para discutir el cambio o mejora.
+2. Haz un fork del repositorio y envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ## Endpoints
-
 
 ### DELETE /usuario/:id
 Elimina una cuenta asociada a la id proporcionada.
