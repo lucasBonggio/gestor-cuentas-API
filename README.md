@@ -12,10 +12,9 @@ API RESTful para gestionar cuentas de usuario con operaciones CRUD y autenticaci
 2. [Características](#características)
 3. [Requisitos](#requisitos)
 4. [Instalación](#instalación)
-5. [Uso](#uso)
-6. [Endpoints](#endpoints)
-7. [Contribuciones](#contribuciones)
-8. [Licencia](#licencia)
+5. [Endpoints](#endpoints)
+6. [Contribuciones](#contribuciones)
+7. [Licencia](#licencia)
 
 ---
 
@@ -71,9 +70,10 @@ cp .env.example .env  # O usa variables.env si prefieres ese nombre
 
 # 5. Edita el archivo `.env` con tus credenciales
 nano .env  # O usa cualquier editor de texto
+```
 
 
-### **7. Contribuciones**
+## Contribuciones
 Explica cómo otros pueden contribuir al proyecto:
 ```markdown
 ## Contribuciones
@@ -82,10 +82,14 @@ Explica cómo otros pueden contribuir al proyecto:
 
 1. Abre un issue para discutir el cambio o mejora.
 2. Haz un fork del repositorio y envía un pull request.
+```
+
 
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+
 
 ## Endpoints
 
